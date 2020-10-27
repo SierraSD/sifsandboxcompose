@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
    sqlserver:
-     image: sierracsd/mocksifdb:1.1
+     image: sierracsd/mocksifdb:1.2
      container_name: "sqlserver"
      ports:
       - "1433:1433"
@@ -13,7 +13,7 @@ services:
    sif:
      depends_on:
        - sqlserver
-     image: sierracsd/sifapisandbox:latest
+     image: sierracsd/sifapisandbox:1.2
      container_name: "sif"
      ports:
        - "8080:80"
